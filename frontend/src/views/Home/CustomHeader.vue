@@ -11,7 +11,10 @@
         </div>
 
         <div class="flex">
-          <button class="font-bold px-6 py-2 text-white focus:outline-none">
+          <button
+            class="font-bold px-6 py-2 text-white focus:outline-none"
+            @click="() => emit('createAccount')"
+          >
             Crie uma conta
           </button>
           <button
@@ -24,20 +27,26 @@
               text-brand-main
               focus:outline-none
             "
+            @click="() => emit('login')"
           >
             Entrar
           </button>
         </div>
       </div>
       <div class="flex flex-col mt-28">
-        <h1 class="text-4xl font-black text-white">Tenha um Feedback. <br>
-        E faça seus clientes mais <br class="hidden lg:inline-block">
-        felizes!
+        <h1 class="text-4xl font-black text-white">
+          Tenha um Feedback. <br />
+          E faça seus clientes mais <br class="hidden lg:inline-block" />
+          felizes!
         </h1>
-        <p class="text-white text-lg mt-5">Receba ideias reclamações e feedbacks com um <br class="hidden lg:inline-block">
-         simples widget na página.</p>
+        <p class="text-white text-lg mt-5">
+          Receba ideias reclamações e feedbacks com um
+          <br class="hidden lg:inline-block" />
+          simples widget na página.
+        </p>
         <div>
-          <button class="
+          <button
+            class="
               font-bold
               px-6
               py-2
@@ -46,7 +55,8 @@
               rounded-full
               text-brand-main
               focus:outline-none
-            ">
+            "
+          >
             Crie uma conta grátis
           </button>
         </div>
@@ -56,7 +66,13 @@
 </template>
 
 <script lang="ts">
-export default {}
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup (_, { emit }) {
+    return { emit }
+  }
+})
 </script>
 
 <style lang="postcss" scoped>
@@ -65,12 +81,12 @@ export default {}
   height: 700px;
 }
 
-.header-group{
+.header-group {
   @apply flex flex-col w-4/5 max-w-6xl;
 }
 
 @media (min-width: 640px) {
-  .header-group{
+  .header-group {
     background-image: url(../../assets/images/blue_balloons.png);
     background-size: 628px;
     background-position: 90% 100%;
