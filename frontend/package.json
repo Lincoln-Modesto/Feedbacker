@@ -16,7 +16,8 @@
     "tiny-typed-emitter": "^2.1.0",
     "vee-validate": "^4.5.11",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
