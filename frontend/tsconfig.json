@@ -33,7 +33,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/utils/bus.ts", "src/hooks/useModal.ts"  ],
   "exclude": [
     "node_modules"
   ]
