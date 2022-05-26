@@ -2,7 +2,8 @@ import { reactive } from 'vue'
 
 type user = {
   name?: string;
-  email?: string
+  email?: string;
+  apiKey?: string
 }
 
 const state = reactive({
