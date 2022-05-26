@@ -41,7 +41,6 @@ export default defineComponent({
       modal.open({
         component: 'ModalCreateAccount'
       })
-      console.log('createaccount')
     }
 
     return {

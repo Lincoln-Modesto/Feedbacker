@@ -93,7 +93,7 @@ import { useField } from 'vee-validate'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import useModal from '../../hooks/useModal'
-import servivces from '../../services'
+import services from '../../services'
 
 export default defineComponent({
   setup () {
@@ -124,12 +124,12 @@ export default defineComponent({
       }
     })
 
-    async function handleSubmit () {
+    async function handleSubmit (): Promise<void> {
       try {
         toast.clear()
         state.isLoading = true
 
-        const { data, errors } = await servivces.auth.login({
+        const { data, errors } = await services.auth.login({
           email: state.email.value as string,
           password: state.password.value as string
         })
