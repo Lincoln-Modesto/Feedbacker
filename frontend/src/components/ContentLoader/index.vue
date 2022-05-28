@@ -36,7 +36,8 @@ export default defineComponent({
   },
   setup (props) {
     const computedWidth = computed(() => {
-      const value = Math.random() * ((props.width as number) - (props.minWidth as number)) as any
+      // eslint-disable-next-line
+      const value = Math.random() * ((props.width as any) - (props.minWidth as any)) as any
 
       return props.width ?? `${Math.floor(value + props.minWidth)}%`
     })
