@@ -1,5 +1,5 @@
 export default (httpClient: any) => ({
-  getMe: async () => {
+  getMe: async (): Promise<any> => {
     const response = await httpClient.get('/users/me')
 
     return {
@@ -7,7 +7,7 @@ export default (httpClient: any) => ({
     }
   },
 
-  generateApiKey: async () => {
+  generateApiKey: async (): Promise<any> => {
     const response = await httpClient.post('/users/me/apikey')
 
     return {
