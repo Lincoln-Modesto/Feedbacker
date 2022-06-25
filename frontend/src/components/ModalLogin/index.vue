@@ -93,7 +93,7 @@ import { useField } from 'vee-validate'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import useModal from '../../hooks/useModal'
-import servivces from '../../services'
+import services from '../../services'
 
 export default defineComponent({
   setup () {
@@ -101,15 +101,13 @@ export default defineComponent({
     const router = useRouter()
     const toast = useToast()
 
-    const {
-      value: emailValue,
-      errorMessage: emailErrorMessage
-    } = useField('email', validateEmptyAndEmail)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const { value: emailValue, errorMessage: emailErrorMessage } = useField('email', validateEmptyAndEmail)
 
-    const {
-      value: passwordValue,
-      errorMessage: passwordErrorMessage
-    } = useField('password', validateEmptyAndLength3)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const { value: passwordValue, errorMessage: passwordErrorMessage } = useField('password', validateEmptyAndLength3)
 
     const state = reactive({
       hasError: false,
@@ -124,12 +122,12 @@ export default defineComponent({
       }
     })
 
-    async function handleSubmit () {
+    async function handleSubmit (): Promise<void> {
       try {
         toast.clear()
         state.isLoading = true
 
-        const { data, errors } = await servivces.auth.login({
+        const { data, errors } = await services.auth.login({
           email: state.email.value as string,
           password: state.password.value as string
         })

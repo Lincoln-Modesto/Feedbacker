@@ -1,3 +1,4 @@
+
 export function validateEmptyAndLength3 (value: string): string | boolean {
   if (!value) {
     return 'Este campo é obrigatório'
