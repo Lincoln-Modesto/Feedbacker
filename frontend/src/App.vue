@@ -1,6 +1,8 @@
 <template>
-  <modal-factory/>
-  <router-view/>
+  <div>
+    <modal-factory />
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -18,19 +20,22 @@ export default defineComponent({
     const route = useRoute()
     const router = useRouter()
 
-    watch(() => route.path, async () => {
-      if (route.meta.hasAuth) {
-        const token = window.localStorage.getItem('token')
+    watch(
+      () => route.path,
+      async () => {
+        if (route.meta.hasAuth) {
+          const token = window.localStorage.getItem('token')
 
-        if (!token) {
-          router.push({ name: 'Home' })
-          return
+          if (!token) {
+            router.push({ name: 'Home' })
+            return
+          }
+
+          const { data } = await services.users.getMe()
+          setCurrentUser(data)
         }
-
-        const { data } = await services.users.getMe()
-        setCurrentUser(data)
       }
-    })
+    )
   }
 })
 </script>

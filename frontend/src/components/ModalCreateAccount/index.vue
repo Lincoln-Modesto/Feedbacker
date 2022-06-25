@@ -132,17 +132,17 @@ export default defineComponent({
     const {
       value: nameValue,
       errorMessage: nameErrorMessage
-    } = useField('password', validateEmptyAndLength3)
+    } = useField('password')
 
     const {
       value: emailValue,
       errorMessage: emailErrorMessage
-    } = useField('email', validateEmptyAndEmail)
+    } = useField('email')
 
     const {
       value: passwordValue,
       errorMessage: passwordErrorMessage
-    } = useField('password', validateEmptyAndLength3)
+    } = useField('password')
 
     const state = reactive({
       hasError: false,

@@ -1,3 +1,5 @@
+import { AxiosInstance } from 'axios'
+
 export type auth = {
   email: string
   password: string
@@ -9,7 +11,7 @@ type register = {
   password: string
 }
 
-export default (httpClient: any) => ({
+export default (httpClient: AxiosInstance) => ({
   register: async ({ name, email, password }: register) => {
     const response = await httpClient.post('/auth/register', {
       name,

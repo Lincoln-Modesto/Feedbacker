@@ -101,15 +101,13 @@ export default defineComponent({
     const router = useRouter()
     const toast = useToast()
 
-    const {
-      value: emailValue,
-      errorMessage: emailErrorMessage
-    } = useField('email', validateEmptyAndEmail)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const { value: emailValue, errorMessage: emailErrorMessage } = useField('email', validateEmptyAndEmail)
 
-    const {
-      value: passwordValue,
-      errorMessage: passwordErrorMessage
-    } = useField('password', validateEmptyAndLength3)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const { value: passwordValue, errorMessage: passwordErrorMessage } = useField('password', validateEmptyAndLength3)
 
     const state = reactive({
       hasError: false,
