@@ -1,5 +1,5 @@
 import Store from '../store'
 
-export function useStore () {
+export default function useStore () {
   return Store
 }

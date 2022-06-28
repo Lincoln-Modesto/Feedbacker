@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, watch } from 'vue'
-import { useStore } from '../../hooks/useStore'
+import useStore from '../../hooks/useStore'
 import { setApiKey } from '../../store/user'
 import { useToast } from 'vue-toastification'
 import HeaderLogged from '../../components/HeaderLogged/index.vue'

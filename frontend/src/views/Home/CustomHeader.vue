@@ -56,6 +56,8 @@
               text-brand-main
               focus:outline-none
             "
+             @click="() => emit('createAccount')"
+             id="cta-create-account-button"
           >
             Crie uma conta grátis
           </button>
