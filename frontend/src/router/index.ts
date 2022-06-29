@@ -4,7 +4,7 @@ const Home = () => import('../views/Home/index.vue')
 const Feedbacks = () => import('../views/Feedbacks/index.vue')
 const Credencials = () => import('../views/Credencials/index.vue')
 
-const routes: Array<RouteRecordRaw> = [
+export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',

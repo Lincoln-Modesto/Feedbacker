@@ -1,5 +1,5 @@
 import router from '@/router'
-import axios from 'axios'
+import axios, { AxiosInstance } from 'axios'
 import AuthService from './auth'
 import UserService from './users'
 import FeedbacksService from './feedbacks'
@@ -11,7 +11,7 @@ const API_ENVS = {
   development: ''
 }
 
-const httpClient = axios.create({
+const httpClient: AxiosInstance = axios.create({
   baseURL: API_ENVS.local
 })
 

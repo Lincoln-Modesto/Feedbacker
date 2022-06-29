@@ -11,7 +11,7 @@
       class="flex items-center justify-between px-4 py-1 rounded cursor-pointer">
         <div class="flex items-center">
           <span
-          :class="`bg-${filter.color}`"
+          :class="`bg-${filter.color.bg}`"
           class="inline-block w-2 h-2 mr-2 rounded-full"/>
           {{ filter.label }}
         </div>
@@ -26,7 +26,7 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue'
 import services from '../../services'
-import { useStore } from '../../hooks/useStore'
+import useStore from '../../hooks/useStore'
 
 const LABELS = {
   all: 'Todos',
@@ -36,10 +36,10 @@ const LABELS = {
 } as any
 
 const COLORS = {
-  all: 'brand-info',
-  issue: 'brand-danger',
-  idea: 'brand-warning',
-  other: 'brand-graydark'
+  all: { text: 'text-brand-info', bg: 'brand-info' },
+  issue: { text: 'text-brand-danger', bg: 'brand-danger' },
+  idea: { text: 'text-brand-warning', bg: 'brand-warning' },
+  other: { text: 'text-brand-graydark', bg: 'brand-graydark' }
 } as any
 
 function applyFiltersStructure (summary: any) {

@@ -17,6 +17,7 @@
           Feedbacks
         </li>
         <li
+        id="logout-button"
         @click="handleLogout"
         class="py-2 px-6 font-bold bg-white text-brand-main rounded-full cursor-pointer focus:outline-none">
           {{ logoutLabel }}
@@ -29,8 +30,8 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import { useStore } from '../../hooks/useStore'
 import { cleanCurrentUser } from '../../store/user'
+import useStore from '../../hooks/useStore'
 
 export default defineComponent({
   setup () {
