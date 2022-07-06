@@ -58,7 +58,7 @@ npm run test:unit
 npm run lint
 ```
 
-- Obs: Para rodar o backend, na raiz da pasta /backend dê um ```npm run build``` e em seguida, o comando ```npm run container```
+- Obs: Para rodar o backend, na raiz da pasta /backend dê um ```npm run build``` e em seguida, o comando ```npm run container``` *necessário docker desktop
 
 ## Demo
 

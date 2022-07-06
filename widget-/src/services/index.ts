@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios'
+import FeedbacksService from './feedbacksService'
 
 const API_ENVS = {
   local: 'http://localhost:3000',
@@ -23,5 +24,5 @@ httpClient.interceptors.response.use((response) => {
 })
 
 export default {
-
+  feedbacks: FeedbacksService(httpClient)
 }
