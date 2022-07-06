@@ -4,11 +4,11 @@ Esse projeto foi desenvolvido a partir do treinamento de Vue 3 do [VueJs Brasil]
 
 ## Funcionalidades (only Front-end)
 
-[x] Criação de widget para feedbacks de erro, sugestões e outros
-[x] Sistema de login/logout
-[x] Criação de conta
-[x] Dashboard de gerenciamento de feedbacks recebidos
-[x] Landing page
+- [x] Criação de widget para feedbacks de erro, sugestões e outros
+- [x] Sistema de login/logout
+- [x] Criação de conta
+- [x] Dashboard de gerenciamento de feedbacks recebidos
+- [x] Landing page
 
 ## Principais dependências instaladas:
 
@@ -65,3 +65,4 @@ npm run lint
 ![](/dashboard/src/assets/images/Landing.png)
 ![](/dashboard/src/assets/images/Landing%20cria%C3%A7%C3%A3o%20de%20conta.png)
 ![](/dashboard/src/assets/images/Admin%20feedbacks.png)
+![](/dashboard/src/assets/images/Rectangle%201.png)
