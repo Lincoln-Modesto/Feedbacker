@@ -63,6 +63,6 @@ npm run lint
 ## Demo
 
 ![](/dashboard/src/assets/images/Landing.png)
-![](/dashboard/src/assets/images/Landing%20cria%C3%A7%C3%A3o%20de%20conta.png)
-![](/dashboard/src/assets/images/Admin%20feedbacks.png)
-![](/dashboard/src/assets/images/Rectangle%201.png)
+![](/dashboard/src/assets/images/LandingCriacaoDeConta.png)
+![](/dashboard/src/assets/images/AdminFeedbacks.png)
+![](/dashboard/src/assets/images/widget.png)
